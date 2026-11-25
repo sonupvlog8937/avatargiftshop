@@ -1,0 +1,318 @@
+import type { Product } from '../types';
+
+/**
+ * ============================================================
+ *  PRODUCT CATALOGUE  –  edit this file to add / update products
+ * ============================================================
+ *  price      = original price (MRP)
+ *  salePrice  = selling price (set equal to price for "no discount")
+ *  images     = replace with your own photos, e.g. '/images/rose-box-1.jpg'
+ *               (put files in the /public/images folder)
+ */
+const u = (id: string) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=70`;
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 'p01',
+    slug: 'red-rose-bouquet-12',
+    name: 'Classic Red Rose Bouquet (12 Roses)',
+    category: 'flowers-bouquets',
+    price: 899,
+    salePrice: 699,
+    inStock: true,
+    images: [u('photo-1518895949257-7621c3c786d7'), u('photo-1487530811176-3780de880c2d'), u('photo-1490750967868-88aa4486c946')],
+    shortDescription: 'Twelve fresh red roses, hand-tied with premium wrapping.',
+    description:
+      'A timeless bouquet of twelve fresh red roses, hand-tied by our florists and wrapped in elegant premium paper with a satin ribbon. Perfect for anniversaries, birthdays and every romantic moment.',
+    highlights: ['12 fresh red roses', 'Premium paper wrapping', 'Satin ribbon finish', 'Greeting card on request'],
+    badge: 'Bestseller',
+    featured: true,
+  },
+  {
+    id: 'p02',
+    slug: 'pink-peony-mixed-bouquet',
+    name: 'Pink & White Mixed Flower Bouquet',
+    category: 'flowers-bouquets',
+    price: 1299,
+    salePrice: 1099,
+    inStock: true,
+    images: [u('photo-1526047932273-341f2a7631f9'), u('photo-1487530811176-3780de880c2d')],
+    shortDescription: 'Soft pink and white seasonal flowers in a lush bouquet.',
+    description:
+      'A lush arrangement of seasonal pink and white flowers with fresh greens. Soft, graceful and ideal for birthdays, thank-yous and get-well wishes.',
+    highlights: ['Seasonal pink & white blooms', 'Fresh green fillers', 'Hand-tied bouquet'],
+    featured: true,
+  },
+  {
+    id: 'p03',
+    slug: 'rose-heart-gift-box',
+    name: 'Rose Heart Gift Box',
+    category: 'anniversary-gifts',
+    price: 1799,
+    salePrice: 1499,
+    inStock: true,
+    images: [u('photo-1518199266791-5375a83190b7'), u('photo-1549465220-1a8b9238cd48')],
+    shortDescription: 'Heart-shaped box of roses with a handwritten-style note card.',
+    description:
+      'Fresh roses arranged inside a luxurious heart-shaped box with a note card. A romantic gift made to impress on anniversaries and Valentine moments.',
+    highlights: ['Heart-shaped premium box', 'Fresh roses', 'Note card included'],
+    badge: 'Premium',
+    featured: true,
+  },
+  {
+    id: 'p04',
+    slug: 'anniversary-memory-frame',
+    name: 'Anniversary Photo Memory Frame',
+    category: 'anniversary-gifts',
+    price: 999,
+    salePrice: 799,
+    inStock: true,
+    images: [u('photo-1513519245088-0e12902e5a38'), u('photo-1607344645866-009c320b63e0')],
+    shortDescription: 'Elegant wooden frame with your favourite photo and message.',
+    description:
+      'A beautifully finished frame personalised with your photo and a short message. Share your photo on WhatsApp after ordering and we will do the rest.',
+    highlights: ['Personalised with your photo', 'Wooden finish', 'Ready-to-gift packaging'],
+  },
+  {
+    slug: 'teddy-bear-giant-3ft',
+    id: 'p05',
+    name: 'Giant Teddy Bear (3 Feet)',
+    category: 'soft-toys',
+    price: 2499,
+    salePrice: 1999,
+    inStock: true,
+    images: [u('photo-1559454403-b8fb88521f11'), u('photo-1558636508-e0db3814bd1d')],
+    shortDescription: 'Super-soft 3 feet teddy – the ultimate cuddle gift.',
+    description:
+      'A plush, huggable 3 feet teddy bear made from premium soft fabric. Makes a statement gift for birthdays, anniversaries and surprises.',
+    highlights: ['3 feet tall', 'Premium plush fabric', 'Gift wrap available'],
+    badge: 'Popular',
+    featured: true,
+  },
+  {
+    id: 'p06',
+    slug: 'cute-teddy-with-heart',
+    name: 'Teddy with Heart (1 Foot)',
+    category: 'soft-toys',
+    price: 499,
+    salePrice: 399,
+    inStock: true,
+    images: [u('photo-1558636508-e0db3814bd1d'), u('photo-1559454403-b8fb88521f11')],
+    shortDescription: 'Small, sweet teddy holding a satin heart.',
+    description:
+      'A cute 1 foot teddy holding a satin heart. Add it to a bouquet or hamper for a lovely combo.',
+    highlights: ['1 foot tall', 'Soft & washable fabric', 'Great combo add-on'],
+  },
+  {
+    id: 'p07',
+    slug: 'premium-chocolate-hamper',
+    name: 'Premium Chocolate Gift Hamper',
+    category: 'chocolates-hampers',
+    price: 1599,
+    salePrice: 1349,
+    inStock: true,
+    images: [u('photo-1549007994-cb92caebd54b'), u('photo-1511381939415-e44015466834')],
+    shortDescription: 'Assorted chocolates beautifully packed in a keepsake box.',
+    description:
+      'A curated hamper of assorted chocolates and treats presented in a reusable keepsake box. Contents may vary slightly based on stock; the shop will confirm before delivery.',
+    highlights: ['Assorted chocolates', 'Reusable keepsake box', 'Ideal for festivals & birthdays'],
+    badge: 'Bestseller',
+    featured: true,
+  },
+  {
+    id: 'p08',
+    slug: 'chocolate-bouquet-12',
+    name: 'Chocolate Bouquet (12 Pieces)',
+    category: 'chocolates-hampers',
+    price: 849,
+    salePrice: 749,
+    inStock: true,
+    images: [u('photo-1511381939415-e44015466834'), u('photo-1549007994-cb92caebd54b')],
+    shortDescription: 'Twelve chocolates arranged like a bouquet.',
+    description:
+      'Chocolates arranged on stems and wrapped like a bouquet – a sweet twist on flowers.',
+    highlights: ['12 chocolates', 'Bouquet-style wrap', 'Perfect for sweet tooths'],
+  },
+  {
+    id: 'p09',
+    slug: 'festive-dry-fruit-hamper',
+    name: 'Festive Dry Fruit & Sweets Hamper',
+    category: 'chocolates-hampers',
+    price: 2199,
+    salePrice: 1899,
+    inStock: false,
+    images: [u('photo-1607344645866-009c320b63e0'), u('photo-1549465220-1a8b9238cd48')],
+    shortDescription: 'Dry fruits and sweets in a decorative festive tray.',
+    description:
+      'A festive hamper with premium dry fruits and sweets arranged in a decorative tray. Currently out of stock – message us to know the next availability.',
+    highlights: ['Premium dry fruits', 'Decorative tray', 'Festival special'],
+  },
+  {
+    id: 'p10',
+    slug: 'birthday-surprise-box',
+    name: 'Birthday Surprise Box',
+    category: 'birthday-gifts',
+    price: 1999,
+    salePrice: 1699,
+    inStock: true,
+    images: [u('photo-1513201099705-a9746e1e201f'), u('photo-1549465220-1a8b9238cd48')],
+    shortDescription: 'Balloons, chocolates, card and a small gift in one box.',
+    description:
+      'A box full of birthday joy: balloons, chocolates, a greeting card and a small gift. Tell us the name and age on WhatsApp to personalise it.',
+    highlights: ['Balloons & chocolates', 'Greeting card', 'Personalised on request'],
+    badge: 'New',
+    featured: true,
+  },
+  {
+    id: 'p11',
+    slug: 'birthday-flower-cake-combo',
+    name: 'Birthday Flowers + Teddy Combo',
+    category: 'birthday-gifts',
+    price: 1699,
+    salePrice: 1399,
+    inStock: true,
+    images: [u('photo-1487530811176-3780de880c2d'), u('photo-1559454403-b8fb88521f11')],
+    shortDescription: 'Fresh bouquet with a cute teddy – a ready combo.',
+    description:
+      'A hand-tied bouquet paired with a cute teddy bear. A popular combo for birthdays.',
+    highlights: ['Fresh bouquet', '1 foot teddy', 'Gift-wrapped'],
+  },
+  {
+    id: 'p12',
+    slug: 'personalised-photo-mug',
+    name: 'Personalised Photo Mug',
+    category: 'personalised-gifts',
+    price: 399,
+    salePrice: 299,
+    inStock: true,
+    images: [u('photo-1514228742587-6b1558fcca3d'), u('photo-1607344645866-009c320b63e0')],
+    shortDescription: 'Ceramic mug printed with your photo and name.',
+    description:
+      'A glossy ceramic mug printed with your favourite photo and text. Send the image on WhatsApp after placing your order.',
+    highlights: ['Ceramic, 330 ml', 'Photo + text printing', 'Gift box available'],
+    featured: true,
+  },
+  {
+    id: 'p13',
+    slug: 'personalised-name-cushion',
+    name: 'Personalised Photo Cushion',
+    category: 'personalised-gifts',
+    price: 699,
+    salePrice: 549,
+    inStock: true,
+    images: [u('photo-1584100936595-c0654b55a2e2'), u('photo-1513519245088-0e12902e5a38')],
+    shortDescription: 'Soft cushion printed with a photo of your choice.',
+    description:
+      'A soft, comfy cushion printed with your chosen photo. Includes cushion filler.',
+    highlights: ['Soft fabric', 'Filler included', 'Photo printing'],
+  },
+  {
+    id: 'p14',
+    slug: 'led-photo-lamp',
+    name: 'LED Photo Moon Lamp',
+    category: 'personalised-gifts',
+    price: 1499,
+    salePrice: 1199,
+    inStock: true,
+    images: [u('photo-1513694203232-719a280e022f'), u('photo-1507473885765-e6ed057f782c')],
+    shortDescription: 'Glowing moon lamp with your photo, with colour modes.',
+    description:
+      'A 3D moon lamp customised with a photo, featuring multiple colour modes and a touch control base.',
+    highlights: ['Multiple colour modes', 'USB rechargeable', 'Personalised photo'],
+    badge: 'Trending',
+  },
+  {
+    id: 'p15',
+    slug: 'scented-candle-set',
+    name: 'Scented Candle Gift Set (3 Pcs)',
+    category: 'home-decor',
+    price: 899,
+    salePrice: 699,
+    inStock: true,
+    images: [u('photo-1603006905003-be475563bc59'), u('photo-1513694203232-719a280e022f')],
+    shortDescription: 'Three soothing scented candles in a gift box.',
+    description:
+      'A set of three scented candles in glass jars, packed in a pretty gift box. Brings calm and warmth to any room.',
+    highlights: ['3 scented candles', 'Glass jars', 'Gift box packaging'],
+    featured: true,
+  },
+  {
+    id: 'p16',
+    slug: 'fairy-light-wall-decor',
+    name: 'Fairy Light Wall Decor',
+    category: 'home-decor',
+    price: 599,
+    salePrice: 449,
+    inStock: true,
+    images: [u('photo-1507473885765-e6ed057f782c'), u('photo-1513694203232-719a280e022f')],
+    shortDescription: 'Warm fairy lights with decorative frame accents.',
+    description:
+      'Warm-white fairy lights with decorative accents to brighten walls and corners for celebrations or everyday decor.',
+    highlights: ['Warm white light', 'Easy to hang', 'Great for celebrations'],
+  },
+  {
+    id: 'p17',
+    slug: 'ceramic-flower-vase',
+    name: 'Ceramic Flower Vase',
+    category: 'home-decor',
+    price: 799,
+    salePrice: 649,
+    inStock: true,
+    images: [u('photo-1578500494198-246f612d3b3d'), u('photo-1513694203232-719a280e022f')],
+    shortDescription: 'Elegant ceramic vase for your table or shelf.',
+    description:
+      'A smooth ceramic vase with a modern finish that suits any living room, bedroom or office desk.',
+    highlights: ['Ceramic', 'Modern finish', 'Fits fresh or dried flowers'],
+  },
+  {
+    id: 'p18',
+    slug: 'surprise-love-box',
+    name: 'Surprise Love Box',
+    category: 'surprise-gifts',
+    price: 2299,
+    salePrice: 1899,
+    inStock: true,
+    images: [u('photo-1549465220-1a8b9238cd48'), u('photo-1518199266791-5375a83190b7')],
+    shortDescription: 'Pop-up box with photos, chocolates, roses and a message.',
+    description:
+      'A romantic surprise box that opens to reveal photos, chocolates, roses and a heartfelt message. Share your photos and text on WhatsApp after ordering.',
+    highlights: ['Pop-up reveal box', 'Photos & message', 'Roses + chocolates'],
+    badge: 'Premium',
+    featured: true,
+  },
+  {
+    id: 'p19',
+    slug: 'balloon-surprise-decoration',
+    name: 'Balloon Surprise Room Decoration',
+    category: 'surprise-gifts',
+    price: 2999,
+    salePrice: 2499,
+    inStock: true,
+    images: [u('photo-1530103862676-de8c9debad1d'), u('photo-1513201099705-a9746e1e201f')],
+    shortDescription: 'Balloon and fairy-light room decor for a perfect surprise.',
+    description:
+      'Complete room decoration with balloons, fairy lights and banner. Booking in advance is recommended – message us with your date and time.',
+    highlights: ['Balloons + fairy lights', 'Name banner', 'Advance booking advised'],
+  },
+  {
+    id: 'p20',
+    slug: 'mini-surprise-gift-hamper',
+    name: 'Mini Surprise Gift Hamper',
+    category: 'surprise-gifts',
+    price: 799,
+    salePrice: 699,
+    inStock: true,
+    images: [u('photo-1607344645866-009c320b63e0'), u('photo-1549465220-1a8b9238cd48')],
+    shortDescription: 'A small, thoughtful hamper for a quick surprise.',
+    description:
+      'A compact hamper with a few lovely surprises, ideal for a quick, thoughtful gift.',
+    highlights: ['Compact & pretty', 'Budget-friendly', 'Gift wrapped'],
+  },
+];
+
+export const getProductBySlug = (slug?: string) =>
+  PRODUCTS.find((p) => p.slug === slug);
+
+export const getProductById = (id: string) =>
+  PRODUCTS.find((p) => p.id === id);

@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream font-body text-ink antialiased;
+  }
+  ::selection {
+    @apply bg-gold/40;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out both;
+  }
+  .hero-photo {
+    height: 16.5rem;
+    object-position: center 70%;
+  }
+  @media (min-width: 640px) {
+    .hero-photo {
+      height: 19rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .hero-photo {
+      height: 22rem;
+    }
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
